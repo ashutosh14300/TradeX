@@ -1,13 +1,6 @@
-// const{model}=require('mongoose');
-
-// const OrdersSchema=require('../schemas/OrdersSchema');
-
-// const OrdersModel=new model("order",schema=OrdersSchema);
-// module.exports={OrdersModel};
 const mongoose = require("mongoose");
-const OrdersSchema = require("../schemas/OrdersSchema");
+const { OrdersSchema } = require("../schemas/OrdersSchema");
 
-// Use mongoose.model (NOT new model)
-const OrdersModel = mongoose.model("order", OrdersSchema);
+const OrdersModel = mongoose.model("orders", OrdersSchema);
 
-module.exports = OrdersModel; // ✅ export directly, not inside {}
+module.exports = { OrdersModel };

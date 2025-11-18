@@ -1,6 +1,6 @@
-// model/HoldingModel.js
-const { model } = require('mongoose');
-const HoldingsSchema = require('../schemas/HoldingsSchema');
+const mongoose = require("mongoose");
+const { HoldingSchema } = require("../schemas/HoldingSchema");
 
-const HoldingModel = model('holding', HoldingsSchema);
-module.exports = HoldingModel;
+const HoldingModel = mongoose.model("holdings", HoldingSchema);
+
+module.exports = { HoldingModel };
